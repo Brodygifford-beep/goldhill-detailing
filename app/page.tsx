@@ -9,12 +9,12 @@ export default function Home() {
           GOLDHILL <span className="font-medium text-[#D4AF37]">DETAILING</span>
         </div>
         <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-wider text-zinc-500">
-          <a href="#services" className="hover:text-[#D4AF37] transition-colors">What We Offer</a>
-          <a href="#about" className="hover:text-[#D4AF37] transition-colors">Our Standard</a>
+          <a href="#services" className="hover:text-[#D4AF37] transition-colors">Our Packages</a>
+          <a href="#about" className="hover:text-[#D4AF37] transition-colors">The Standard</a>
           <a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a>
         </div>
         <a href="#contact" className="hidden md:block bg-black text-white px-5 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-black transition-colors">
-          Get a Quote
+          Secure a Slot
         </a>
       </nav>
 
@@ -25,35 +25,37 @@ export default function Home() {
           <span className="text-[#D4AF37]">Specialists</span>
         </h1>
         <p className="max-w-2xl text-zinc-600 text-base md:text-lg font-light leading-relaxed mb-10">
-          Pro-grade detailing, paint correction, and ceramic coatings. 
+          Pro-grade aesthetic restoration and surface protection. 
           We deliver uncompromising showroom-quality results directly to your driveway across Middle Tennessee.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a href="#contact" className="bg-black text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#D4AF37] hover:text-black transition-colors shadow-lg">
-            Get a Free Estimate
+            Book an Appointment
           </a>
           <a href="#services" className="border-2 border-black text-black bg-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors">
-            Explore Services
+            View Packages
           </a>
         </div>
       </section>
 
-      {/* "What We Offer" - Service Grid */}
+      {/* "Our Packages" - Service Grid */}
       <section id="services" className="px-6 py-24 border-t border-zinc-200 bg-zinc-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black tracking-tight uppercase mb-4 text-black">What We Offer</h2>
-            <p className="text-zinc-600">Select a package to elevate and protect your vehicle.</p>
+            <h2 className="text-3xl font-black tracking-tight uppercase mb-4 text-black">Curated Tier Packages</h2>
+            <p className="text-zinc-600">Tailored maintenance and restoration for premium vehicles.</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Full Detailing */}
-            <div className="p-8 border border-zinc-200 bg-white group hover:border-[#D4AF37] transition-all flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-md">
+          <div className="grid lg:grid-cols-3 gap-6">
+            
+            {/* Interior Only */}
+            <div className="p-8 border border-zinc-200 bg-white group hover:border-[#D4AF37] transition-all flex flex-col justify-between min-h-[350px] shadow-sm hover:shadow-md">
               <div>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-3 text-black">Full Detailing Packages</h3>
-                <div className="w-12 h-1 bg-[#D4AF37] mb-4"></div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Interior Commission</p>
+                <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-black">The Cabin Refinement</h3>
+                <div className="w-12 h-1 bg-zinc-200 group-hover:bg-[#D4AF37] transition-colors mb-6"></div>
                 <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Comprehensive interior and exterior reset. From safe hand-washing to deep interior extraction, we bring your vehicle back to its baseline perfection.
+                  A meticulous rejuvenation of your vehicle's inner sanctuary. Includes deep hot water extraction, leather hide conditioning, plastics UV protection, and streak-free interior glass.
                 </p>
               </div>
               <a href="#contact" className="text-xs font-bold uppercase tracking-widest text-black group-hover:text-[#D4AF37] flex items-center transition-colors">
@@ -61,13 +63,14 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Ceramic Coating */}
-            <div className="p-8 border border-zinc-200 bg-white group hover:border-[#D4AF37] transition-all flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-md">
+            {/* Exterior Only */}
+            <div className="p-8 border border-zinc-200 bg-white group hover:border-[#D4AF37] transition-all flex flex-col justify-between min-h-[350px] shadow-sm hover:shadow-md">
               <div>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-3 text-black">Ceramic Coating</h3>
-                <div className="w-12 h-1 bg-[#D4AF37] mb-4"></div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Exterior Commission</p>
+                <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-black">The Surface Revival</h3>
+                <div className="w-12 h-1 bg-zinc-200 group-hover:bg-[#D4AF37] transition-colors mb-6"></div>
                 <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Long-term, high-gloss hydrophobic protection. Shield your clear coat from UV rays, road debris, and harsh environmental contaminants.
+                  Complete exterior decontamination and gloss enhancement. Features a multi-stage safe wash, iron removal, deep wheel barrel cleaning, and application of a high-gloss ceramic sealant.
                 </p>
               </div>
               <a href="#contact" className="text-xs font-bold uppercase tracking-widest text-black group-hover:text-[#D4AF37] flex items-center transition-colors">
@@ -75,19 +78,24 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Paint Correction */}
-            <div className="p-8 border border-zinc-200 bg-white group hover:border-[#D4AF37] transition-all flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-md">
+            {/* Both (The Goldhill Signature) - Visually Inverted */}
+            <div className="p-8 border-2 border-[#D4AF37] bg-black group transition-all flex flex-col justify-between min-h-[350px] shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-[#D4AF37] text-black text-[9px] font-bold uppercase tracking-widest px-3 py-1">
+                Most Popular
+              </div>
               <div>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-3 text-black">Paint Correction</h3>
-                <div className="w-12 h-1 bg-[#D4AF37] mb-4"></div>
-                <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Machine polishing and compounding to permanently remove swirl marks, light scratches, and oxidation, restoring a mirror-like finish.
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[#D4AF37] mb-2">Complete Commission</p>
+                <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-white">The Gold Hill Signature</h3>
+                <div className="w-12 h-1 bg-[#D4AF37] mb-6"></div>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  The absolute pinnacle of our mobile studio. Seamlessly combines <span className="text-white font-medium">The Cabin Refinement</span> and <span className="text-white font-medium">The Surface Revival</span> into one masterclass service, completely resetting your vehicle to its baseline perfection.
                 </p>
               </div>
-              <a href="#contact" className="text-xs font-bold uppercase tracking-widest text-black group-hover:text-[#D4AF37] flex items-center transition-colors">
-                Request Quote <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              <a href="#contact" className="text-xs font-bold uppercase tracking-widest text-[#D4AF37] hover:text-white flex items-center transition-colors">
+                Secure This Package <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
+
           </div>
         </div>
       </section>
@@ -98,7 +106,7 @@ export default function Home() {
           <div className="md:w-1/2">
             <h2 className="text-3xl font-black tracking-tight uppercase mb-6 text-black">Making Your Vehicle Excellent in All Aspects</h2>
             <p className="text-zinc-600 text-sm leading-relaxed mb-4">
-              Driving in Tennessee means dealing with intense sun, unpredictable weather, and harsh road contaminants. A showroom shine does not just happen on its own—it requires effort, high-grade chemicals, and precision.
+              Driving means dealing with intense sun, unpredictable weather, and harsh road contaminants. A showroom shine does not just happen on its own—it requires effort, high-grade chemicals, and precision.
             </p>
             <p className="text-zinc-600 text-sm leading-relaxed">
               To many detailers, you are just a number. At Goldhill, we bring the premium detailing studio directly to your location, treating every vehicle as if it were our own. No vehicle deserves to be left in the dust.
@@ -114,12 +122,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Booking/Contact Section - Uses Black to anchor the page */}
+      {/* Booking/Contact Section */}
       <section id="contact" className="px-6 py-24 bg-black text-white border-t-4 border-[#D4AF37] text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-black tracking-tight uppercase mb-4 text-[#D4AF37]">Schedule Your Detail</h2>
           <p className="text-zinc-400 text-sm mb-10">
-            Ready for peak aesthetic appeal? Contact us for a free consultation on what your vehicle needs.
+            Appointments fill up fast. Drop us a line with your location, vehicle type, and preferred commission to book.
           </p>
           <div className="inline-block p-8 border border-zinc-800 bg-zinc-950 w-full max-w-md relative">
             <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37]"></div>
