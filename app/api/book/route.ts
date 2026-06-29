@@ -52,8 +52,8 @@ Where: ${data.location}
 
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: process.env.PHONE_GATEWAY_ADDRESS,
-      subject: 'Goldhill Booking', 
+      to: process.env.GMAIL_USER, // Sends directly to your own inbox
+      subject: '⚠️ NEW GOLDHILL BOOKING', 
       text: messageBody,
     });
 
