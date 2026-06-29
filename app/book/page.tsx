@@ -66,7 +66,9 @@ export default function BookAppointment() {
         <Link href="/" className="text-lg font-black tracking-widest uppercase text-black">
           GOLDHILL <span className="font-medium text-[#E5B80B]">DETAILING</span>
         </Link>
-        <div className="text-xs font-bold uppercase text-zinc-400">Step {step} of 4</div>
+        <div className="text-xs font-bold uppercase text-zinc-400">
+          {step < 5 ? `Step ${step} of 4` : 'Final Step'}
+        </div>
       </nav>
 
       <div className="flex-grow flex items-center justify-center p-6">
@@ -171,10 +173,20 @@ export default function BookAppointment() {
 
           {step === 5 && (
             <div className="text-center animate-in zoom-in duration-500">
-              <div className="w-16 h-16 bg-black text-[#E5B80B] rounded-full flex items-center justify-center text-3xl mx-auto mb-6">✓</div>
-              <h2 className="text-3xl font-black uppercase mb-4 text-black">Request Sent</h2>
-              <p className="text-zinc-600 mb-8">We have received your booking request and will text you shortly to confirm the slot.</p>
-              <Link href="/" className="text-xs font-bold uppercase tracking-widest text-black hover:text-[#E5B80B]">
+              <div className="w-16 h-16 bg-[#E5B80B] text-black rounded-full flex items-center justify-center text-3xl mx-auto mb-6">⚠️</div>
+              <h2 className="text-3xl font-black uppercase mb-4 text-black">One Last Step!</h2>
+              <p className="text-zinc-600 mb-8">
+                Your appointment has been saved in our system. To finalize your slot, tap the button below to send us your booking details.
+              </p>
+              
+              <a 
+                href={`sms:6155939193?&body=${encodeURIComponent(`NEW BOOKING\nName: ${details.name}\nPhone: ${details.phone}\nPkg: ${service.toUpperCase()} - ${size.toUpperCase()}\nWhen: ${date} @ ${time}\nWhere: ${details.location}`)}`}
+                className="block w-full bg-black text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#E5B80B] hover:text-black transition-colors mb-6"
+              >
+                Send Booking Text
+              </a>
+              
+              <Link href="/" className="text-xs font-bold uppercase tracking-widest text-zinc-400 hover:text-black">
                 Return Home
               </Link>
             </div>
